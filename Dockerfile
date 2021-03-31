@@ -20,10 +20,9 @@ RUN chmod +x /root/.nix-profile/etc/profile.d/nix.sh
 # With CUDA toolkit, this takes *quite* a while
 RUN $NIXENV && \
     cd /tmp && \
-    bash /root/persist-env.sh /root/prod-env.nix
+    bash /root/persist-env.sh /root/prod-env.nix && nix-collect-garbage
 
 COPY namd2-14.nix /root/
 
 # Build namd3 environment 
 RUN nix-shell /root/namd2-14.nix
-
