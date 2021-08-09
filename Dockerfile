@@ -1,5 +1,21 @@
 FROM xsede/centos-nix-base:latest
 
+################## METADATA ######################
+
+LABEL base_image="xsede/centos-nix-base"
+LABEL version="1.0.0"
+LABEL software="Nix"
+LABEL software.version="2.14"
+LABEL about.summary="A template container with NAMD 2.14 and CUDA 10.2 installed using the Nix package manager in a CentOS 7 environment"
+LABEL about.home="https://github.com/XSEDE/nix-container-namd2.14-cuda-10.2"
+LABEL about.documentation="https://github.com/XSEDE/nix-container-namd2.14-cuda-10.2"
+LABEL about.license_file="https://github.com/XSEDE/nix-container-namd2.14-cuda-10.2"
+LABEL about.license="MIT"
+LABEL about.tags="example-container" 
+LABEL authors="XCRI <help@xsede.org>"
+
+################## ENVIRONMENT ######################
+
 SHELL ["/bin/bash", "-c"]
 
 USER root
